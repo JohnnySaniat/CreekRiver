@@ -1,78 +1,49 @@
-# BrassAndPoem Console Application
+# Creek River API
 
-Welcome to BrassAndPoem, where brass meets poetry!
+## Introduction
+This is the README for the Creek River API. This API provides endpoints to manage campsites and reservations in the Creek River campground system. It allows users to perform operations such as retrieving, creating, updating, and deleting campsites and reservations.
 
-## Overview
+## Getting Started
+To get started with using the Creek River API, follow these steps:
 
-This console application manages a list of products and product types. Users can display all products, delete a product, add a new product, or update product properties through a user-friendly menu.
+1. **Clone the Repository**: Clone this repository to your local machine using Git.
 
-## Usage
+2. **Database Configuration**: Ensure that you have PostgreSQL installed and running. Update the `appsettings.json` file with the appropriate connection string for your PostgreSQL database.
 
-1. Run the application.
-2. Choose an option from the menu:
-   - Display All Products (Option 1)
-   - Delete a Product (Option 2)
-   - Add a New Product (Option 3)
-   - Update Product Properties (Option 4)
-   - Exit (Option 5)
+3. **Build and Run the Application**: Build and run the application using your preferred development environment or IDE. Alternatively, you can run it from the command line using `dotnet run`.
 
-## Product Data
+4. **API Documentation**: Once the application is running, you can access the Swagger UI documentation by navigating to `https://localhost:<port>/swagger/index.html` in your web browser.
 
-The application initializes with sample product and product type data.
+## Dependencies
+The Creek River API relies on the following dependencies:
 
-### Sample Products
+- `Microsoft.EntityFrameworkCore`: Entity Framework Core for database operations.
+- `Npgsql.EntityFrameworkCore.PostgreSQL`: PostgreSQL provider for Entity Framework Core.
+- `Swashbuckle.AspNetCore`: Swagger UI and OpenAPI support for documenting API endpoints.
 
-- **Big Ol' Book of Poems**
-  - Price: $14.99
-  - Product Type: Poetry
+## Configuration
+The API can be configured using the `appsettings.json` file. This includes database connection strings, logging settings, and other application-specific configurations.
 
-- **Timmy's Trombone**
-  - Price: $200.00
-  - Product Type: Brass Instruments
+## API Endpoints
+The following are the available API endpoints provided by the Creek River API:
 
-- **Poetry for Dumbos**
-  - Price: $19.99
-  - Product Type: Poetry
+- **GET /api/campsites**: Retrieves a list of all campsites.
+- **GET /api/campsites/{id}**: Retrieves details of a specific campsite by its ID.
+- **POST /api/campsites**: Creates a new campsite.
+- **PUT /api/campsites/{id}**: Updates an existing campsite.
+- **DELETE /api/campsites/{id}**: Deletes a campsite by its ID.
+- **GET /api/reservations**: Retrieves a list of all reservations, including related user profiles and campsite details.
 
-- **Barely a Baritone**
-  - Price: $666.66
-  - Product Type: Brass Instruments
+## Development
+During development, it's recommended to set the environment variable `ASPNETCORE_ENVIRONMENT` to `Development` to enable additional debugging features and logging.
 
-- **Worst Poems to Read on an Escalator**
-  - Price: $9.99
-  - Product Type: Poetry
+## Contributing
+Contributions to the Creek River API are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
-### Sample Product Types
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-1. Poetry (ID: 1)
-2. Brass Instruments (ID: 2)
 
-## Features
-
-### Display All Products (Option 1)
-
-Displays details of all products, including product number, name, price, and product type.
-
-### Delete a Product (Option 2)
-
-Prompts the user to choose a product to delete and asks for confirmation.
-
-### Add a New Product (Option 3)
-
-Prompts the user to enter details for a new product, including name, price, and product type.
-
-### Update Product Properties (Option 4)
-
-Allows the user to update the properties of an existing product, including name, price, and product type. Press Enter to leave a property unchanged.
-
-### Exit (Option 5)
-
-Exits the application.
-
-## Notes
-
-- The application uses a simple menu-driven interface.
-- Press any key to continue after each operation.
 
 ## Author
 
